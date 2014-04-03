@@ -1,12 +1,12 @@
 Steve Musgrave
 Sroop Sunar
 Colin Marshall
-Josh Fail-Brown
+Josh Fail\-Brown
 Louise Lai
 Robin Doble
 Alex Wong
 Scott Dimmock
-Muhanad Al-Rubaiee
+Muhanad Al\-Rubaiee
 Shelley Hope
 Will Hall
 Oliver Delevingne
