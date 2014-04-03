@@ -55,7 +55,12 @@ end
 
 def print(names)
 	names.each do |name|
-		puts name
+		printname = "Name: #{name[:name]}"
+		printcohort = "Cohort: #{name[:cohort]}"
+		printsex = "Sex: #{name[:gender]}"
+		print printname
+		print printcohort #.center(75, " ")
+		print printsex
 	end
 end
 
