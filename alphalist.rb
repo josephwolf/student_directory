@@ -45,6 +45,9 @@ students = [
 	{:name => "Mistery Man", :cohort => "February", :gender => "male"},
 ]
 
+
+
+
 def print_header
 	puts "Here's a list yo"
 	puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -57,10 +60,28 @@ def print(names)
 end
 
 def print_footer(students)
-	students.each do |student|
-		puts"The February cohort has #{student[:cohort].include?("February").length} students."
+#	students.each do |student|
+#		puts"The February cohort has #{student[:cohort].include?("February")} students."
+#	end
+	febchecker = students.select do |student|
+		student[:cohort].include? ("February")
 	end
-	puts"The March cohort has #{students.select{|element| element == "March"}.length} students."
+
+	marchecker = students.select do |student|
+		student[:cohort].include? ("March")
+	end
+
+	girlchecker = students.select do |student|
+		student[:gender].include? ("female")
+	end
+
+	boychecker = students.select do |student|
+		student[:gender].include? ("male")
+	end
+	puts"The February cohort has #{febchecker.length} students."
+	puts"The March cohort has #{marchecker.length} students."
+	puts"The there are #{girlchecker.length} girls"
+	puts"The there are #{boychecker.length} boys!"
 	puts"All in all, there are #{students.length} makers!"
 end
 
