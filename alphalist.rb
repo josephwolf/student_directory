@@ -28,7 +28,7 @@ students = [
 	{:name => "Ruslan Vikhor", :cohort => "February", :gender => "male"},
 	{:name => "Toby Retallick", :cohort => "February", :gender => "male"},
 	{:name => "Mark Mekhaiel", :cohort => "February", :gender => "male"},
-	{:name => "Sarah Young", :cohort => "February", :gender => "male"},
+	{:name => "Sarah Young", :cohort => "February", :gender => "female"},
 	{:name => "Hannah Wight", :cohort => "February", :gender => "male"},
 	{:name => "Khushkaran Singh", :cohort => "February", :gender => "male"},
 	{:name => "Rick brunstedt", :cohort => "February", :gender => "male"},
@@ -53,21 +53,13 @@ def print_header
 	puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 end
 
-def print(names)
-	names.each do |name|
-		printname = "Name: #{name[:name]}"
-		printcohort = "Cohort: #{name[:cohort]}"
-		printsex = "Sex: #{name[:gender]}"
-		print printname
-		print printcohort #.center(75, " ")
-		print printsex
+def print(students)
+	students.each do |student|
+		puts "Name: #{student[:name]}\t\tCohort: #{student[:cohort]}\tSex: #{student[:gender]}"
 	end
 end
 
 def print_footer(students)
-#	students.each do |student|
-#		puts"The February cohort has #{student[:cohort].include?("February")} students."
-#	end
 	febchecker = students.select do |student|
 		student[:cohort].include? ("February")
 	end
